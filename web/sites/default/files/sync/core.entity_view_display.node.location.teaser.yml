@@ -1,0 +1,42 @@
+uuid: d83d54d7-455f-48d6-b9ae-6c5a5eab2633
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.body
+    - field.field.node.location.field_adress
+    - field.field.node.location.field_email
+    - field.field.node.location.field_equipment
+    - field.field.node.location.field_logo
+    - field.field.node.location.field_phone_number
+    - field.field.node.location.field_website
+    - node.type.location
+  module:
+    - text
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_adress: true
+  field_email: true
+  field_equipment: true
+  field_logo: true
+  field_phone_number: true
+  field_website: true

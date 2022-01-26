@@ -1,0 +1,4 @@
+/.ddev/
+/vendor/
+/.editorconfig
+/.gitattributes

@@ -1,0 +1,91 @@
+uuid: 190ad56d-559c-451f-9e5d-380c047d7c74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company.body
+    - field.field.node.company.field_adress
+    - field.field.node.company.field_email
+    - field.field.node.company.field_industry
+    - field.field.node.company.field_logo
+    - field.field.node.company.field_phone_number
+    - field.field.node.company.field_website
+    - node.type.company
+  module:
+    - address
+    - image
+    - link
+    - text
+    - user
+id: node.company.default
+targetEntityType: node
+bundle: company
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_adress:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_industry:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_phone_number:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
